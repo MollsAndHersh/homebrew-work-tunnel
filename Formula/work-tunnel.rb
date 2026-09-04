@@ -54,6 +54,10 @@ class WorkTunnel < Formula
 
   def caveats
     <<~EOS
+      (First time only) Homebrew may ask you to trust this third-party tap before installing:
+        brew tap MollsAndHersh/work-tunnel
+        brew trust mollsandhersh/work-tunnel   # or: brew install MollsAndHersh/work-tunnel/work-tunnel
+
       To connect this computer to Work Tunnel:
 
         1. Pair it (starts the device-authorization flow and prints a short code):
