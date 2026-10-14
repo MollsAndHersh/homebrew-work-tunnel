@@ -3,11 +3,11 @@
 # This template is rendered by packaging/render-formula.sh (invoked by the release workflow,
 # .github/workflows/release-agent.yml) with the version + per-arch sha256s from the built tarballs, then
 # pushed to the tap repo MollsAndHersh/homebrew-work-tunnel as Formula/work-tunnel.rb. Do not hand-edit the
-# tap's copy — edit this template. Placeholders: 0.6.2, cb2037d7de2ad2de303b8e1ff2a78bc0a164835e37653b1d488b9a860c1f6e37, 1a9db0ff6aa0fd40a269b2c4dfaa36e5fb9546b9c0a6a3a76f172e9153dca9ab, 04cc638daf0a4d72c9d87ea6bd8585910ca84244154bfae4ab063314c876fa9a.
+# tap's copy — edit this template. Placeholders: 0.7.0, 5c3fd21b7e1dda0514d04c590434f3802b7d2beeef05df56e24091c260402087, 92962cae0d3a62afd7104959c38b3c3d98c2300599eacb7dc8ff2434b381419d, a399b8bfa3b9121db5c612a4b8ec85548986c689c755df50d87f12e04591ea88.
 class WorkTunnel < Formula
   desc "Drive Claude Code (or any CLI) on your own Mac/Linux from a locked-down work browser"
   homepage "https://worktunnel.mollsandhersh.com"
-  version "0.6.2"
+  version "0.7.0"
   # Proprietary — Molls and Hersh LLC. (Homebrew taps don't require an SPDX license.)
 
   # Tarballs are hosted on the public Work Tunnel download endpoint (the same host that serves /download's
@@ -19,18 +19,18 @@ class WorkTunnel < Formula
   on_macos do
     on_arm do
       url "#{RELEASE}/work-tunnel-#{version}-osx-arm64.tar.gz"
-      sha256 "cb2037d7de2ad2de303b8e1ff2a78bc0a164835e37653b1d488b9a860c1f6e37"
+      sha256 "5c3fd21b7e1dda0514d04c590434f3802b7d2beeef05df56e24091c260402087"
     end
     on_intel do
       url "#{RELEASE}/work-tunnel-#{version}-osx-x64.tar.gz"
-      sha256 "1a9db0ff6aa0fd40a269b2c4dfaa36e5fb9546b9c0a6a3a76f172e9153dca9ab"
+      sha256 "92962cae0d3a62afd7104959c38b3c3d98c2300599eacb7dc8ff2434b381419d"
     end
   end
 
   on_linux do
     on_intel do
       url "#{RELEASE}/work-tunnel-#{version}-linux-x64.tar.gz"
-      sha256 "04cc638daf0a4d72c9d87ea6bd8585910ca84244154bfae4ab063314c876fa9a"
+      sha256 "a399b8bfa3b9121db5c612a4b8ec85548986c689c755df50d87f12e04591ea88"
     end
   end
 
